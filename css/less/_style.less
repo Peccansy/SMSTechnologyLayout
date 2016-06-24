@@ -1,0 +1,74 @@
+@title-color: #8e75b2;
+@text-color: #6d6d6d;
+.background-color-gradient(){
+
+background: #9678b5;
+background: -moz-linear-gradient(left, #9678b5 0%, #6867a5 100%);
+background: -webkit-linear-gradient(left, #9678b5 0%,#6867a5 100%);
+background: linear-gradient(to right, #9678b5 0%,#6867a5 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9678b5', endColorstr='#6867a5',GradientType=1 );
+
+}
+
+@font-face {
+    font-family: "HelveticaRegular";
+    src: url("../fonts/HelveticaRegular/HelveticaRegular.eot");
+    src: url("../fonts/HelveticaRegular/HelveticaRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/HelveticaRegular/HelveticaRegular.woff") format("woff"),
+    url("../fonts/HelveticaRegular/HelveticaRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	font: 19px/20px "HelveticaRegular", Arial, sans-serif;
+	.background-color-gradient();
+	color: @text-color;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+a {
+	color: #FFF;
+	text-decoration: none;
+	&:visited, &:hover {
+		color: #FFF;
+	} 
+}
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+header {
+	height: 950px;
+
+	img {
+		position: absolute;
+		top: 2em;
+		left: 2em;
+	}
+}
+nav ul {
+	text-align: right;
+	margin-right: 2em;
+
+	.menu-item {
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 75px 10px 0 10px;
+
+}
+
+}
+.mainwrap {
+	h1,h2 {
+		color: @title-color;
+	}
+	.section-color {
+		background: #FFF;
+	}
+}
