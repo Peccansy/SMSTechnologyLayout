@@ -6,17 +6,23 @@
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/4.1.1/normalize.css">
 	<title>SMS TECHNOLOGY | Homepage</title>
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
 	<header>
 		<a href="#"><img src="img/logo.png" alt="logo" /> </a>
-		<nav>
+		<nav>			
 			<ul>
 				<li class="menu-item"><a href="#">About</a></li>
 				<li class="menu-item"><a href="#">Technologies</a></li>
 				<li class="menu-item"><a href="#">Information</a></li>
 				<li class="menu-item"><a href="#">Contact</a></li>				
-			</ul>			
+			</ul>
+			<button class="navbar-nav-toggle">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+            </button>		
 		</nav>
 		<img class="bg" src="img/bg.png" alt="Hand" />		
 	</header>
@@ -101,5 +107,25 @@
 			</footer>		
 	</div>
 
+<script type="text/javascript">
+	$( document ).ready( function() {
+
+    'use strict';
+
+    // Navbar fadein
+    // --------------------------------------------------
+    $( '.navbar' ).removeClass( 'animated' );
+
+    // Responsive navigation
+    // --------------------------------------------------
+    $( '.navbar-nav-toggle, .navbar-nav a' ).on( 'click', function() {
+        
+           // $( '.navbar-nav' ).slideToggle();
+            //$( '.navbar' ).toggleClass( 'open' );
+            $( 'header nav ul' ).css( 'display','inline-block' );
+        
+    } );
+} );
+</script>
 </body>
 </html>

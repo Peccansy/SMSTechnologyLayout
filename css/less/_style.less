@@ -112,7 +112,32 @@ header {
 			width: 58%;
 		}
 	}
+
+	.navbar-nav-toggle {
+    background: none;
+    border: 0;
+    display: none;
+  /* Remove extra margin from below the <button> element */
+    padding: 30px 20px 5px;
+	}
+
+	.navbar-nav-toggle .icon-bar {
+    background-color: #44444f;
+    border-radius: 1px;
+    display: block;
+    height: 3px;
+    width: 24px;
+	}
+
+.navbar-nav-toggle .icon-bar + .icon-bar {
+    margin-top: 4px;
 }
+
+.inverse .navbar-nav-toggle .icon-bar {
+    background-color: #f4f4f4;
+}
+}
+
 nav ul {
 	text-align: right;
 	margin-right: 2em;
@@ -293,6 +318,16 @@ nav ul {
 
 		header {
 			height: 575px;
+		}
+
+		nav {
+			text-align: right;
+			ul {
+				display: none;				
+			}
+			button.navbar-nav-toggle {
+				display: inline-block;
+			}
 		}
 
 		.mainwrap {
