@@ -7,23 +7,27 @@
 	<title>SMS TECHNOLOGY | Homepage</title>
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/main.min.js"></script>
 </head>
 <body>
 	<header>
-		<a href="#"><img src="img/logo.png" alt="logo" /> </a>
+
+	<div class="row">
+		<a href="index.html"><img src="img/logo.png" alt="logo" /> </a>
+		<button class="navbar-nav-toggle">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+        </button>
 		<nav>			
 			<ul>
 				<li class="menu-item"><a href="#">About</a></li>
 				<li class="menu-item"><a href="#">Technologies</a></li>
 				<li class="menu-item"><a href="#">Information</a></li>
 				<li class="menu-item"><a href="#">Contact</a></li>				
-			</ul>
-			<button class="navbar-nav-toggle">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-            </button>		
+			</ul>					
 		</nav>
+	</div>	
 		<img class="bg" src="img/bg.png" alt="Hand" />		
 	</header>
 	<div class="mainwrap">
@@ -107,25 +111,6 @@
 			</footer>		
 	</div>
 
-<script type="text/javascript">
-	$( document ).ready( function() {
 
-    'use strict';
-
-    // Navbar fadein
-    // --------------------------------------------------
-    $( '.navbar' ).removeClass( 'animated' );
-
-    // Responsive navigation
-    // --------------------------------------------------
-    $( '.navbar-nav-toggle, .navbar-nav a' ).on( 'click', function() {
-        
-           // $( '.navbar-nav' ).slideToggle();
-            //$( '.navbar' ).toggleClass( 'open' );
-            $( 'header nav ul' ).css( 'display','inline-block' );
-        
-    } );
-} );
-</script>
 </body>
 </html>

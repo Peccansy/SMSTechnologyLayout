@@ -22,10 +22,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9678b5', end
 * {
 	box-sizing: border-box;
 }
+
 body {
 	font: 19px/20px "HelveticaRegular", Arial, sans-serif;
 	.background-color-gradient();
 	color: @text-color;
+	max-width: 1980px;
 }
 ul {
 	list-style: none;
@@ -44,9 +46,10 @@ a {
 	margin: 0 auto;
 }
 header {
+	width: 100%;
 	height: 950px;
 
-	@media (max-width:1024px) and (orientation:landscape) {
+	@media (max-width:1024px) {
 		height: 750px;
 	}
 
@@ -54,7 +57,7 @@ header {
 	img {
 		position: absolute;
 		top: 2em;
-		left: 2em;
+		left: 2em;		
 
 		@media (max-width:769px) {
 
@@ -63,11 +66,17 @@ header {
 			width: 20%;
 		}
 	}
+	.logo-sm {
+		position: inherit;
+		padding: 10px 0 10px 5px;
+		float: left;
+	}
 
 	.bg {
 		z-index: -2;
 		left: 28%;
-		top: 6em;		
+		top: 6em;
+		max-width: 1980px;		
 		width: 40%;
 
 		@media (max-width:1655px)
@@ -86,43 +95,56 @@ header {
     		width: 50%;
     	}
 
-    	@media (max-width:1024px) and (orientation:landscape) {
+    	@media (max-width:1024px) {
 			top: 12em;
-		}
-
-    	@media (max-width:980px) {
-    		top: 22em;
-    		width: 52%;
-    	}
+		}    	
 
     	@media (max-width:900px) {
-    		top: 24em;
+    		top: 13em;
     		width: 54%;
 			
 		}
 
 		@media (max-width:769px) {
-			top: 26em;
+			top: 17em;
     		left: 23%;
 		}
 
 		@media (max-width:675px) {
 
-			top: 17em;
+			top: 8em;
 			width: 58%;
 		}
+		
+		@media (max-width:620px) {
+		    top: 11em;
+    		width: 60%;
+    		left: 20%;
+    	}
+
+    	@media (max-width:505px) {
+		    top: 15em;    		
+    	}
+
+    	@media (max-width:375px) {
+		    top: 17em;    		
+    	}
+
+    	@media (max-width:320px) {
+		    top: 20em;    		
+    	}
 	}
 
-	.navbar-nav-toggle {
+.navbar-nav-toggle {
     background: none;
     border: 0;
     display: none;
   /* Remove extra margin from below the <button> element */
-    padding: 30px 20px 5px;
+    padding: 30px 20px;
 	}
 
-	.navbar-nav-toggle .icon-bar {
-    background-color: #44444f;
+.navbar-nav-toggle .icon-bar {
+    background-color: #FFF;
     border-radius: 1px;
     display: block;
     height: 3px;
@@ -136,9 +158,18 @@ header {
 .inverse .navbar-nav-toggle .icon-bar {
     background-color: #f4f4f4;
 }
+.row {
+	transition: background-color .3s ease-in;
+	width: 100%;
+}
+.mobile-navbar {
+	background-color: #6867a5;
+	padding-bottom: 10px;
+}
 }
 
 nav ul {
+	display: block;
 	text-align: right;
 	margin-right: 2em;
 
@@ -165,7 +196,8 @@ nav ul {
 
 }
 .mainwrap {
-
+	
+	width: 100%;
 	.section-color {
 		background: #FFF;		
 	}
@@ -175,11 +207,16 @@ nav ul {
 		@media (max-width:769px) {
 			padding: 2em 0;
 		}
+
+		@media (max-width: 350px) {
+			padding: .7em 0;
+		}
 	}
 
-	.clouds{
+	.clouds {
 
 		width: 100%;
+		max-width: 1980px;
     	position: absolute;
     	z-index: -1;
     	top: 36em;
@@ -197,23 +234,31 @@ nav ul {
     		top: 42em;
     	}
 
-    	@media (max-width:1024px) and (orientation:landscape) {
+    	@media (max-width:1024px) {
 			top: 33em;
-		}
+		}    	
 
-    	@media (max-width:980px) {
-    		top: 42em;
-    	}
-
-    	@media (max-width:925px) {
-    		top: 44em;  		
-			
+		@media (max-width:769px) {
+			top: 34em;    		
 		}
 
 		@media (max-width:675px) {
 
-			top: 27em;
+			top: 25em;
 		}
+
+		@media (max-width:620px) {
+
+			top: 26em;
+		}
+
+		@media (max-width:505px) {
+		    top: 27.2em;    		
+    	}
+
+    	@media (max-width:320px) {
+		    top: 28em;    		
+    	}
 		
     	
 
@@ -254,6 +299,7 @@ nav ul {
 	}
 	.section-list {
 		position: relative;
+		z-index: -1;
 		color: #FFF;
 
 		img {
@@ -292,6 +338,9 @@ nav ul {
 			display: inline-block;
 			margin-right: 1em;
 		}
+		.menu-item:last-child {
+			margin-right: 0;
+		}
 		.menu-item a {
 			color: @title-color;
 			text-decoration: underline;
@@ -318,16 +367,28 @@ nav ul {
 
 		header {
 			height: 575px;
-		}
-
-		nav {
 			text-align: right;
-			ul {
-				display: none;				
-			}
+
 			button.navbar-nav-toggle {
 				display: inline-block;
 			}
+		}
+
+		nav {
+			
+			ul {
+				display: none;				
+			}
+
+			.nav-open {
+				display: block;				
+			}
+
+			.nav-open .menu-item {
+				display: block;
+				padding: 15px 20px 0 10px;
+			}
+			
 		}
 
 		.mainwrap {
@@ -386,4 +447,38 @@ nav ul {
 
 
 		
+	}
+	@media(min-width:675px) {
+		header .row {
+			transition: none;
+		}
+		header .mobile-navbar {
+			background-color: transparent;
+			padding-bottom: 0;
+		}
 	}	
+	@media (max-width:350px) {
+		
+		.container
+		{
+			width: 100%;
+			padding: 0 0 0 10px;
+		}
+
+
+		.mainwrap footer {
+
+			.menu-item {
+				margin-right: .5em;
+			}
+			.menu-item a {
+				font-size: .5em;
+			}
+
+			p {
+				font-size: .3em;
+			}
+		}
+			
+		}	
+		
