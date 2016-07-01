@@ -3,8 +3,7 @@ $( document ).ready( function() {
     'use strict';
     var count = 0;    
     // Responsive navigation
-    // --------------------------------------------------
-    if ($(window).width()<=675) {
+    // -------------------------------------------------- 
 
     $( '.navbar-nav-toggle' ).on( 'click', function() { 
 
@@ -45,7 +44,8 @@ $( document ).ready( function() {
     //------------------------------------------------- 
     $(window).scroll(function(){
 
-
+    if ($(window).width()<=675) {
+        
     	if ( $(window).scrollTop()>$('.row').height() ) {
     		
     		if (count==0) {
@@ -69,5 +69,7 @@ $( document ).ready( function() {
     		return(count);
     	}
 
-    } );
-}
+    } 
+} );
+
+} );
