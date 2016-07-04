@@ -213,6 +213,48 @@ nav ul {
 		}
 	}
 
+	.contacts {
+
+		small {
+			display: inline-block;
+			margin-bottom: 10px;
+			color: 	#b50000;
+		}
+		label, input {
+			display: block;
+		}
+		label {
+			margin-bottom: 10px;
+		}
+		input[type="text"],input[type="email"],input[type="tel"] {
+			background: #e9e9f2;
+			outline: none;
+			border: none;
+			border-radius: 8px;
+			padding: 10px 0;
+			width: 50%;
+			margin-bottom: 20px;
+			&:focus {
+				border: 2px solid #c5c5cd;
+				padding: 8px 0;
+			}
+
+		}
+		input[type="submit"]{
+			background: #9678b5;
+			padding: 7px 25px;
+			color: #FFF;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			border-radius: 8px;
+
+			&:hover,&:active {
+				background: #ccb8e7;
+			}
+		}
+	}
+
 	.clouds {
 
 		width: 100%;
@@ -298,8 +340,7 @@ nav ul {
 		font-weight: bold;
 	}
 	.section-list {
-		position: relative;
-		z-index: -1;
+		position: relative;		
 		color: #FFF;
 
 		img {
@@ -330,6 +371,41 @@ nav ul {
 	.section-list+p{
 		color: #FFF;
 	}
+	.stories {
+		color:#FFF;
+	}
+
+	.stories-grid li {
+		position: relative;
+    	display: inline-block;
+    	box-sizing: border-box;
+    	width: 32%;
+    	padding-right: 40px;
+    	height: 420px;
+    	vertical-align: top;
+
+    	img {
+    	position: inherit;    	
+    	margin-bottom: 10px;
+    	width: 100%;	    		
+		}			
+
+		div.list-text 	p {
+				font-size: .9em;								
+			}
+		a {
+			position: absolute;
+			bottom: 0;
+			border-bottom: 1px solid;
+
+			&:hover {
+				color: #ddd;
+			}
+		}
+
+	
+}
+
 
 	footer {
 		background-color: #FFF;
