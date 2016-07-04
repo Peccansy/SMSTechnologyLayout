@@ -268,7 +268,7 @@ nav ul {
 		color: @title-color;
 		font-weight: normal;
 		font-size: 2em;
-		line-height: 1em;		
+		line-height: 1.2em;		
 	}
 
 	h1 {
@@ -340,12 +340,29 @@ nav ul {
 		}
 		.menu-item:last-child {
 			margin-right: 0;
+
+			& a:after {
+				content: '';
+			}
 		}
 		.menu-item a {
 			color: @title-color;
-			text-decoration: underline;
+			border-bottom: 1px solid;
 			text-transform: uppercase;
 			font-weight: bold;
+			position: relative;
+
+			&:after {
+				content:'/';
+				border: none;
+				position: absolute;
+				right: -15px;
+			}
+
+
+			&:hover {
+				color: #ccb8e7;
+			}
 		}
 		p {
 			color: @title-color;
