@@ -162,6 +162,7 @@ header {
 .row {
 	transition: background-color .3s ease-in;
 	width: 100%;
+	z-index: 5;
 }
 .mobile-navbar {
 	background-color: #6867a5;
@@ -459,9 +460,7 @@ nav ul {
 	.bold {
 		font-weight: bold;
 	}
-	.section-list {
-		position: relative;
-		z-index: -1;		
+	.section-list {				
 		color: #FFF;
 
 		img {
@@ -471,6 +470,7 @@ nav ul {
 
 		li {
 			margin-bottom: 2em;
+			position: relative;			
 		}
 
 		li > * {
@@ -496,8 +496,7 @@ nav ul {
 		color:#FFF;
 	}
 
-	.stories-grid li {
-		position: relative;
+	.stories-grid li {			
     	display: inline-block;
     	box-sizing: border-box;
     	width: 32%;
@@ -515,7 +514,7 @@ nav ul {
 				font-size: .9em;								
 			}
 		a {
-			position: absolute;
+			position: absolute;			
 			bottom: 0;
 			border-bottom: 1px solid;
 
@@ -594,8 +593,7 @@ nav ul {
     	margin-bottom: 5px;    		    		
 		}
 		a {
-			font-size: .7em;
-			
+			font-size: .7em;			
 		}
 	}	
 		
@@ -685,8 +683,7 @@ nav ul {
 			
 			a {
 				font-size: .7em;
-				position: inherit;
-			
+				position: inherit;			
 			}
 		}
 
@@ -752,7 +749,7 @@ nav ul {
 
 				&:after {
 					right: -9px;
-    				top: -px;
+    				top: -4px;
 				}				
 			}
 

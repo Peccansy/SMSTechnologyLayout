@@ -71,5 +71,16 @@ $( document ).ready( function() {
 
     } 
 } );
+    //Resize scroll
+    //-------------------------------------------------
+    $(window).resize(function() {
+
+        if ($(window).width()>675) {
+
+            $('header .row').css('position','inherit');
+            $('.row a img').removeClass('logo-sm');
+            $('nav ul').removeAttr('style');  
+        }
+    } );
 
 } );
