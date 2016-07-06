@@ -77,7 +77,8 @@ $( document ).ready( function() {
 
         if ($(window).width()>675) {
 
-            $('header .row').css('position','inherit');
+           // $('header .row').css('position','inherit');
+            $('header .row').removeAttr('style');
             $('.row a img').removeClass('logo-sm');
             $('nav ul').removeAttr('style');  
         }
